@@ -47,12 +47,11 @@ body {
     margin-bottom: 40px;
 }
 .fonctionnement {
-    height: 350px;
+    height: 300px;
     margin-top: 50px;
 
-        h3 {
+        strong {
         font-size: 24px;
-        margin-left: -30px;
         }
             li {
             list-style-type: none;
@@ -61,7 +60,7 @@ body {
             height: 60px;
             border-radius: 20px 20px 20px 20px;
             background-color: rgb(246, 246, 246);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             margin-left: -35px;
              }
                   a {
@@ -72,6 +71,9 @@ body {
                   margin-left: 80px;
                   margin-top: 19px;
                   }
+}
+.liste-fonctionnement:hover {
+    background-color: rgb(246, 236, 255);
 }
 .numero {
     display: flex;
@@ -88,17 +90,27 @@ body {
 #telephone {
     @extend %couleur-icone;
 }
+#telephone:hover {
+    color: $primary-color;
+}
 #liste {
     @extend %couleur-icone;
 }
+#liste:hover{
+    color: $primary-color;
+}
 #shop {
     @extend %couleur-icone;
+}
+#shop:hover {
+    color: $primary-color;
 }
 ::marker {
     color: black;
 }
 section {
     height: 1350px;
+    width: 360px;
     background-color: rgb(246,246,246);
     h2 {
         margin-top: 50px;
@@ -108,12 +120,10 @@ section {
 }
 
 .box {
+    @extend %affichage-box;
 	background-color: #FFFFFF;
+    width: 350px;
 	border-radius: 25px 25px 25px 25px;
-	display: inline-block;
-	text-decoration: none;
-	list-style-type: none;
-	color: black;
 	margin-bottom: 25px;
 	box-shadow: 3px 3px 3px rgb(235,235,235);
 }
@@ -126,34 +136,32 @@ section {
 	overflow: hidden;
 	object-fit: cover;
 }
-.titre-box{ 
-    display: inline-block;
-    text-decoration: none;
-    list-style-type: none;
-    color: black;
+.nouveau {
+    height: 30px;
+    width: 72px;
+    background-color: $third-color;
+    position: absolute;
+    color: green;
+    text-align: center;
+    margin-left: 265px;
+    margin-top: -170px;
+}
+.texte-nouveau {
+        margin-top: 5px;
+}
+
+.titre-box { 
+    @extend %affichage-box;
     margin-right: 150px;
     margin-left: 10px;
     margin-bottom: -30px;
    }
 .ville {
-    display: inline-block;
-    text-decoration: none;
-    list-style-type: none;
+    @extend %affichage-box;
     margin-left: 10px;
-    color: black;
     font-family: 'Roboto', sans-serif; font-weight: 100;
 }
-#coeur
-{
-    @extend %couleur-coeur;
-}
-#coeur-1 {
-    @extend %couleur-coeur;
-}
-#coeur-2 {
-    @extend %couleur-coeur;
-}
-#coeur-3 {
+.fa-heart {
     @extend %couleur-coeur;
 }
 footer {
@@ -168,29 +176,29 @@ footer {
     color: black;
     opacity: 1;
     font-size: 22px;
-    margin-left: -90px;
+    margin-right: -32px;
 }
 #menu-restaurant {
     height: 300px;
     width: 360px;
-    position: inherit;
 }
 #section-page {
     height: 1250px;
     width: 360px;
     border-radius: 45px 45px 0px 0px;
     margin-top: -60px;
-    position: absolute;
+    position: sticky;
 }
 #nom-restaurant {
     font-family: 'Shrikhand', sans-serif;
     font-size: 25px;
     margin-left: 15px;
 }
-#coeur-5 {
+.fa-heart.menu {
     @extend %couleur-coeur;
-    margin-top: -65px;
-    margin-right: 15px;
+    margin-right: 10px;
+    display: inline-block;
+    margin-top: 56px;
 }
 .titre-majuscule {
     font-family: 'Roboto', sans-serif; font-weight: 100;
@@ -221,26 +229,11 @@ footer {
     @extend .btn;
     margin-top: 70px;
 }
-#bas-de-page-menu {
-    @include footer;
-    margin-top: 1190px;
-    width: 360px;
-}
 .titre-footer {
     font-family: 'Shrikhand';
 }
-#coeur-6 {
-    @extend %couleur-coeur;
-    margin-top: -65px;
-    margin-right: 15px;
-}
-#coeur-7 {
-    @extend %couleur-coeur;
-    margin-top: -65px;
-    margin-right: 15px;
-}
-#coeur-8 {
-    @extend %couleur-coeur;
-    margin-top: -65px;
-    margin-right: 15px;
+.overflow-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
