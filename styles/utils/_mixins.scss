@@ -52,13 +52,14 @@
     font-size: 18px;
 }
 @mixin marges-page {
-    width: 360px;
+    width: 370px;
     border-radius: 45px 45px 0px 0px;
     margin-top: -60px;
     max-height: 1350px;
     position: sticky;
 }
 @mixin menu {
+    margin-left: 10px;
     animation: fadein 3s;
   }
   @keyframes fadein {
@@ -77,12 +78,8 @@
   }
 
 @mixin kokoro {
-    font-size: 19px;
-    margin-top: -21px;
-    margin-right: 7px;
-    color: rgb(197, 101, 219);
-    transform-origin: bottom;
-    animation: 3s linear slideintop;
+    color: violet;
+    animation: 2s linear slideintop;
 }
 @keyframes slideintop {
 0% {
