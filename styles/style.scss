@@ -3,6 +3,7 @@
 @import './utils/variables';
 @import './utils/polices';
 
+
 /* CSS Accueil version mobile */ 
 .logo {
     @include logo;
@@ -155,7 +156,8 @@ section {
     @extend %couleur-coeur;
 }
 .coeur {
-    display: block;
+    display: flex;
+    float: right;
     margin-top: -68px;
     height: 40px;
     width: 40px;
@@ -169,11 +171,11 @@ section {
     font-weight: bold;
     color: white;
     z-index: 5;
-    font-size: 26px;
+    font-size: 27px;
     transform-origin: bottom;
     position: absolute;
     margin-left: -20px;
-    margin-top: -26px;
+    margin-top: -16px;
 }
 .coeur:hover::before {
    @include kokoro;
@@ -186,8 +188,8 @@ section {
     margin-top: 3px;
 }
 .kokoro::before {
-    margin-top: -30px;
-    margin-left: -22px;
+    margin-top: -20px;
+    margin-left: -32px;
     font-size: 30px;
     z-index: 3;
     position: absolute;
@@ -242,13 +244,14 @@ html {
     z-index: 1;
 }
 .fa-heart.menu {
-    display: block;
+    display: flex;
+    float: right;
     height: 40px;
     width: 40px;
     cursor: pointer;
     color: black;
-    margin-top: 73px;
-    margin-right: 15px;
+    margin-top: 78px;
+    margin-right: 20px;
     border: none;
     background-color: transparent;
     outline: 0;
@@ -260,7 +263,6 @@ html {
     font-size: 26px;
     transform-origin: bottom;
     position: absolute;
-    margin-left: -20px;
     margin-top: -26px;
 }
 .fa-heart.menu:hover::before {
@@ -270,12 +272,11 @@ html {
     display: block;
     color: black;
     z-index: 3;
-    margin-right: 3px;
     margin-top: 3px;
+    margin-left: -13px;
 }
 .kokoro-menu::before {
     margin-top: -30px;
-    margin-left: -22px;
     font-size: 30px;
     z-index: 3;
     position: absolute;
@@ -471,7 +472,7 @@ html {
     100% { opacity: 0;
         z-index: 1;
     }
-   } 
+   }  
 /* Paramétrage Tablette */
 
 @media only screen and (min-width: 600px) and (max-width: 720px) {
@@ -538,12 +539,12 @@ html {
         margin-left: 450px;
     }
     i.kokoro {
-        margin-right: -500px;
-        margin-top: -65px;
+        margin-top: -57px;
+        margin-left: 523px;
     }
     .coeur::before {
-        margin-top: -94px;
-        margin-left: 483px;
+        margin-top: -77px;
+        margin-left: 492px;
     }
     footer {
         width: 724px;
@@ -591,8 +592,13 @@ html {
         height: 1300px;
     }
     .fa-heart.menu {
-        margin-left: 520px;
+        display: flex;
+        float: right;
+        margin-left: 500px;
         margin-top: -45px;
+    }
+    .kokoro-menu {
+        margin-left: -13px;
     }
     #nom-restaurant {
         margin-left: 60px;
@@ -679,11 +685,11 @@ section {
     margin-left: 530px;
 }
 i.kokoro {
-    margin-right: -670px;
-    margin-top: -65px;
+    margin-left: 684px;
+    margin-top: -63px;
 }
 .coeur::before {
-    margin-top: -94px;
+    margin-top: -82px;
     margin-left: 653px;
 }
 footer {
@@ -733,8 +739,13 @@ html {
     margin-left: 120px;
 }
 .fa-heart.menu {
+    display: flex;
+    float: right;
     margin-left: 690px;
-    margin-top: -57px;
+    margin-top: -51px;
+}
+.kokoro-menu {
+    margin-left: -13px;
 }
 #nom-restaurant {
     margin-left: 60px;
@@ -828,10 +839,11 @@ html {
         margin-left: 880px;
     }
     .fa-heart.coeur::before {
-        margin-top: -93px;
+        margin-top: -83px;
     }
     .fa-heart.kokoro {
         margin-top: -64px;
+        margin-right: 1.5px;
     }
     footer {
         width: 1440px;
@@ -881,8 +893,13 @@ html {
         margin-left: 260px;
     }
     .fa-heart.menu {
+        display: flex;
+        float: right;
         margin-left: 800px;
         margin-top: -52px;
+    }
+    .kokoro-menu {
+        margin-left: -13px;
     }
     #nom-restaurant {
         margin-left: 145px;
